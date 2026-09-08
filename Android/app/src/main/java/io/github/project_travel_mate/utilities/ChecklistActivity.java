@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 
 import java.util.Objects;
@@ -16,10 +17,13 @@ import io.github.project_travel_mate.R;
 
 public class ChecklistActivity extends AppCompatActivity {
 
+    private static final String LOG_TAG = ChecklistActivity.class.getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+        Log.d(LOG_TAG, "onCreate: initializing checklist screen");
         setContentView(R.layout.activity_check_list);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
